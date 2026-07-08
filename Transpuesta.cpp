@@ -3,6 +3,17 @@ using namespace std;
 
 int main()
 {
+    int f, c;
+    cin >> f;
+    cin >> c;
+    int Trans[f][c];
+    for (int i = 0; i < f; i++)
+    {
+        for (int j = 0; j < c; j++)
+        {
+            cin >> Trans[i][j];
+        }
+    }
 
     return 0;
 }
