@@ -14,6 +14,13 @@ int main()
             cin >> Trans[i][j];
         }
     }
-
+    for (int i = 0; i < c; i++)
+    {
+        for (int j = 0; j < f; j++)
+        {
+            cout << Trans[j][i] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
