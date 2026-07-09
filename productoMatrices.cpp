@@ -6,16 +6,21 @@ int main(){
     int A[100][100];
     int B[100][100];
     int C[100][100];
+    cout<<"Ingrese filas de A (m):";
     cin>>m;
+    cout<<"Ingrese columnas de A / filas de B (n): ";
     cin>>n;
+    cout<<"Ingrese columnas de B (p):";
     cin>>p;
 
+    cout<<"\n--- Llenado de la Matriz A ---"<<endl;
     for(int i=0; i<m; i++){
         for(int j=0; j<n; j++){
           cin>>A[i][j];  
         }
     }
 
+    cout<<"\n--- Llenado de la Matriz B ---"<<endl;
     for(int i=0; i<n; i++){
         for(int j=0; j<p; j++){
           cin>>B[i][j];  
@@ -26,9 +31,17 @@ int main(){
         for(int j=0; j<p; j++){
             C[i][j]=0;
             for(int k=0; k<n; k++){
-                C[i][j]=C[i][j]+(A[i][j]*B[i][j]);
+                C[i][j]=C[i][j]+(A[i][k]*B[k][j]);
             }
         }
+    }
+
+    cout<<"\n--- Matriz resultante C ---"<<endl;
+    for(int i=0; i<m; i++){
+        for(int j=0; j<p; j++){
+          cout<<C[i][j]<<" ";  
+        }
+        cout<<endl;
     }
 
     return 0;
